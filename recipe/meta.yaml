@@ -1,5 +1,5 @@
 {% set name = "jwcrypto" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a87ac0922d09d9a65011f76d99849f1fbad3d95439c7452cebf4ab0871c2b665
+  sha256: adbe1f6266cde35d40d5de6d1419612b3bd4c869b9332c88c9d7a9163d305100
 
 build:
   noarch: python
