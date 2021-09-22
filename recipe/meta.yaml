@@ -22,6 +22,7 @@ requirements:
   run:
     - python >=3.6
     - cryptography >=2.3
+    - deprecated
 
 test:
   imports:
