@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python
-    - cryptography >=1.5
+    - cryptography >=2.3
 
 test:
   imports:
