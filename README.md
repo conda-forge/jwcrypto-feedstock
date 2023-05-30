@@ -1,11 +1,11 @@
-About jwcrypto
-==============
+About jwcrypto-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jwcrypto-feedstock/blob/main/LICENSE.txt)
 
 Home: https://jwcrypto.readthedocs.io/en/latest/
 
 Package license: LGPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jwcrypto-feedstock/blob/main/LICENSE.txt)
 
 Summary: Implements JWK,JWS,JWE specifications using python-cryptography
 
