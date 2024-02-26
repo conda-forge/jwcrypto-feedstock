@@ -1,5 +1,5 @@
 {% set name = "jwcrypto" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2c1dc51cf8e38ddf324795dfe9426dee9dd46caf47f535ccbc18781fba810b8d
+  sha256: 0815fbab613db99bad85691da5f136f8860423396667728a264bcfa6e1db36b0
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.6
     - cryptography >=3.4
-    - deprecated
+    - typing_extensions
 
 test:
   imports:
@@ -51,3 +51,4 @@ extra:
   recipe-maintainers:
     - aymondebroglie
     - scopatz
+    - jan-janssen
