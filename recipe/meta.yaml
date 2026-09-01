@@ -1,5 +1,5 @@
 {% set name = "jwcrypto" %}
-{% set version = "1.5.9" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dbbbfcdad7a6fc40cf3d5a635b11115fc42591b7ab869a36ad347a516a6e1c5d
+  sha256: 02a82b0a3a36b2553309d78c65e1c0e3350b640fe4091f53f66f582b11f49378
 
 build:
   noarch: python
