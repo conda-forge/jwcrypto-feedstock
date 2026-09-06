@@ -19,7 +19,6 @@ Key (JWK) RFC 7518 - JSON Web Algorithms (JWA) RFC 7519 - JSON Web Token
 (JWT) RFC 7520 - Examples of Protecting Content Using JSON Object Signing
 and Encryption (JOSE)
 
-
 Current build status
 ====================
 
