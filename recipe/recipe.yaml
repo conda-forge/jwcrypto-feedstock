@@ -1,42 +1,43 @@
-{% set name = "jwcrypto" %}
-{% set version = "1.6.0" %}
+schema_version: 1
+
+context:
+  name: jwcrypto
+  version: "1.6.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: 02a82b0a3a36b2553309d78c65e1c0e3350b640fe4091f53f66f582b11f49378
 
 build:
+  number: 1
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - hatchling
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - cryptography >=3.4
     - typing_extensions
 
-test:
-  imports:
-    - jwcrypto
-  requires:
-    - pip
-    - python {{ python_min }}
-  commands:
-    - pip check
+tests:
+  - python:
+      imports:
+        - jwcrypto
+      pip_check: true
+      python_version: 
+        - ${{ python_min }}
+        - "*"
 
 about:
-  home: https://jwcrypto.readthedocs.io/en/latest/
   license: LGPL-3.0-only
-  license_family: LGPL
   license_file: LICENSE
   summary: Implements JWK,JWS,JWE specifications using python-cryptography
   description: |
@@ -45,8 +46,9 @@ about:
     Key (JWK) RFC 7518 - JSON Web Algorithms (JWA) RFC 7519 - JSON Web Token
     (JWT) RFC 7520 - Examples of Protecting Content Using JSON Object Signing
     and Encryption (JOSE)
-  doc_url: https://jwcrypto.readthedocs.io/en/latest/
-  dev_url: https://github.com/latchset/jwcrypto
+  homepage: https://jwcrypto.readthedocs.io/en/latest/
+  repository: https://github.com/latchset/jwcrypto
+  documentation: https://jwcrypto.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
